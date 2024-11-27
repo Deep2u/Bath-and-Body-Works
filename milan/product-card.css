@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* now for media query  */
+/* .intro-section{
+  width: 800px;
+} */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.top-navbar{
+  width: 100%;
+  height: 250px;
+  background-color: rgb(244, 244, 244);
+  /* position: fixed; */
+}
+
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-section{
+  height: auto;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  
+}
+
+.product-img{
+  width: 98%;
+  height: auto;
+}
+
+.page-title{
+  font-size: 24px;
+  font-family:"Source Sans 3", sans-serif ;
+  font-weight: 400;
+  padding: 0px 20px;
+}
+/* Container for the filter search */
+.filter-search {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 18px 18px ;
+  justify-content: end;
+}
+
+/* Styling for the "Sort By" text */
+.filter-search p {
+  font-size: 15px;
+  font-family:"Source Sans 3", sans-serif ;
+  margin: 0;
+}
+
+/* Container for the dropdown button and items */
+.dropdown-container {
+  position: relative;
+}
+
+/* Dropdown button styling */
+.dropdown-button {
+  font-family: "Source Sans 3", sans-serif;
+  padding: 8px 20px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px; 
+}
+
+.dropdown-button i {
+  font-size: 12px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; /* Position the dropdown below the button */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: none; /* Initially hide the dropdown */
+  z-index: 100;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #4483f0;
+}
+
+/* Show the dropdown menu when the button is hovered */
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive: Make the dropdown button full width on smaller screens */
+@media (max-width: 750px) {
+  .dropdown-button {
+    width: 100%; /* Take up full width on small screens */
+  }
+}
+
+  /* Container Styling */
+.category-search {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  font-family: "Source Sans 3", sans-serif;   
+}
+
+/* Individual Categories */
+.product-type, .fragrance-category, .fragrance-name {
+  position: relative; 
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Dropdown List Styling */
+.dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%; /* Position below the parent */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; 
+  z-index: 100;
+  width: 150px;
+}
+
+/* Dropdown Items */
+.dropdown li {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show Dropdown on Hover */
+.product-type:hover .dropdown,
+.fragrance-category:hover .dropdown,
+.fragrance-name:hover .dropdown {
+  display: block;
+}
+
+.custom-hr {
+  border: none; 
+  height: 2px;
+  background-color: black; 
+  margin-top: -19px;
+}
+
+.down-arrow{
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.done-btn{
+  background-color: #000000;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    width: 60%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Source Sans 3", sans-serif; 
+}
+
+
+
+  
+  .main-product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    background-color: #fff;
+  }
+
+
+  .product-card {
+    width: 220px;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 500px;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .img-fav{
+    display: flex;
+    position: relative;
+  }
+
+  .fav-icon{
+    position: absolute;
+    right: 0;
+    left: 60%;
+    top: 4%;
+  }
+
+  .badge-new {
+    color: #005699;
+    font-family: "Source Sans 3", sans-serif;
+    margin: 12px 0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .product-name {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: black;
+    text-align: center;
+  }
+
+  .product-category {
+    color: black;
+    font-size: 13px;
+    margin-bottom: 12px;
+    margin-top: -5px;
+    text-align: center;
+  }
+
+  .price-original {
+    color: #999999;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: inline;
+  }
+
+  strike {
+    color: rgba(0,0,0,0.6);
+  }
+
+  .price-discount{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .price-final {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 12px;
+    color: #EF5F96;
+    font-weight: 600;
+  }
+
+  .add-to-cart {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Source Sans 3", sans-serif;
+  }
+
+  .add-to-cart:hover {
+    background-color: #a1a7a3;
+    color: #000000;
+  }
+
+  .show-more{
+    background-color: transparent;
+    color: #00A1E0;
+    border: 1px solid #00A1E0;
+    border-radius: 2px;
+    padding: 12px 24px;
+    width: 300px;
+    height: 35px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: "Source Sans 3", sans-serif;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show-more:hover{
+    background-color: #00A1E0;
+    color: #f0f0f0;
+  }
+
+  .customer-viewed-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-title{
+    font-weight: 500;
+    padding: 16px 20px;
+    margin-top: 25px;
+  }
+  
+  .product-card-customer{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+  }
+
+  .right-arrow{
+    position: absolute;
+    top: 40%;
+    right: -2%;
+    font-size: 20px;
+    cursor: pointer;
+  }
