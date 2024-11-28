@@ -26,7 +26,6 @@ body{
   width: 100%; /* Full width by default */
   top: 0; /* Stick to the top */
   left: 0; /* Stick to the left */
- /* Allows wrapping of child elements */
 }
 
 .header-1-blue{
@@ -234,15 +233,85 @@ padding-left:50px;
   margin-top: 250px;
 }
 
-.navbar-section{
-  height: auto;
-  background-color: #ffff;
+
+
+.main-container {
   display: flex;
-  flex-direction: column;
-  width: 900px;  
-  color: gray;
-  text-align: center;
 }
+
+/* Sidebar Styling */
+.navbar-menu {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;       /* Remove default padding */
+  margin: 0;        /* Remove default margin */
+  margin-left: 50px;
+}
+
+.navbar-section {
+  width: 900px;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 15px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  font-family: "Source Sans 3", sans-serif;
+  margin-top: 270px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Main Headings Styling */
+.main-heading {
+  font-family: "Source Sans 3", sans-serif;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 15px 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left; /* Ensure left alignment */
+}
+
+.main-heading:hover {
+  color: #EF5F96;
+}
+
+/* Sub-items Styling */
+.sub-item {
+  font-size: 16px;
+  color: #000000;
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left; /* Ensure left alignment */
+  padding-left: 10px; /* Optional for slight indentation */
+  /* font-weight: 400; */
+  padding: 5px;
+}
+
+/* .sub-item:hover {
+  color: #4483f0;
+} */
+
+li {
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+
+
+/* Right Section Styling */
+.secondry-container {
+  flex-grow: 1; /* Take up the remaining space */
+  padding: 20px;
+}
+
 
 
 .product-img{
